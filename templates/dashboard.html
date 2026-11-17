@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard | SmartHire</title><link rel="stylesheet" href="/static/css/style.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="/">Smart<span>Hire</span></a><nav><a href="/">Browse jobs</a></nav><div class="nav-actions"><span id="welcomeText" class="muted"></span><button class="btn btn-outline" id="logoutButton">Log out</button></div></header>
+<main class="dashboard-main">
+  <p class="eyebrow">YOUR SPACE</p><h1 class="dashboard-title">Application dashboard</h1><p class="muted">Keep an eye on the opportunities you have applied for.</p>
+  <div class="stat-card"><span class="stat-label">Total applications</span><strong id="totalApplications">—</strong><span class="muted">Applications submitted from this account</span></div>
+  <section class="section dashboard-section"><div class="section-heading"><div><p class="eyebrow">YOUR ACTIVITY</p><h2>Recent applications</h2></div><a href="/" class="text-link">Find more jobs →</a></div>
+  <div id="applicationList" class="application-list"><div class="empty">Loading your applications…</div></div></section>
+</main>
+<footer><a class="brand" href="/">Smart<span>Hire</span></a><p>Built as a full-stack learning project.</p></footer>
+<div class="toast" id="toast" role="status"></div><script src="/static/js/app.js"></script>
+</body></html>

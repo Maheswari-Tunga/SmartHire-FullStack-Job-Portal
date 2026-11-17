@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHire | Find your next opportunity</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">Smart<span>Hire</span></a>
+  <nav><a href="#jobs">Explore Jobs</a><a id="dashboardLink" href="/dashboard" hidden>Dashboard</a></nav>
+  <div class="nav-actions">
+    <span id="welcomeText" class="muted"></span>
+    <button class="btn btn-light" id="authButton">Sign in</button>
+    <button class="btn btn-outline" id="logoutButton" hidden>Log out</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">YOUR CAREER, YOUR NEXT CHAPTER</p>
+      <h1>Find work that<br><span>moves you forward.</span></h1>
+      <p class="hero-sub">Explore opportunities, apply with confidence and keep your job search organised in one place.</p>
+      <a class="btn btn-primary" href="#jobs">Explore opportunities</a>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-top"><span class="dot"></span> Career snapshot</div>
+      <div class="snapshot-number">One step at a time.</div>
+      <p>Search roles that match your skills and track every application from your dashboard.</p>
+      <div class="mini-tags"><span>Software</span><span>Data</span><span>Design</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="jobs">
+    <div class="section-heading"><div><p class="eyebrow">OPPORTUNITIES</p><h2>Explore latest jobs</h2></div><span class="muted" id="jobCount"></span></div>
+    <div class="search-panel">
+      <input id="searchInput" type="search" placeholder="Search job title, company or skill">
+      <input id="locationInput" type="search" placeholder="Location">
+      <button class="btn btn-primary" id="searchButton">Search jobs</button>
+    </div>
+    <div id="jobList" class="job-grid"><div class="empty">Loading opportunities…</div></div>
+  </section>
+  <section class="bottom-cta"><div><p class="eyebrow">STAY ORGANISED</p><h2>Your applications, all in one place.</h2><p>Sign in to keep track of the roles you have applied for.</p></div><a class="btn btn-primary" href="/dashboard">Open dashboard</a></section>
+</main>
+<footer><a class="brand" href="/">Smart<span>Hire</span></a><p>Built as a full-stack learning project.</p></footer>
+
+<div class="modal-backdrop" id="authModal" hidden>
+  <div class="modal">
+    <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+    <p class="eyebrow">WELCOME TO SMARTHIRE</p><h2 id="modalTitle">Sign in</h2>
+    <div class="tab-row"><button class="tab active" id="loginTab">Sign in</button><button class="tab" id="registerTab">Create account</button></div>
+    <form id="authForm">
+      <label id="nameLabel" hidden>Full name<input id="nameField" autocomplete="name"></label>
+      <label>Email address<input id="emailField" type="email" required autocomplete="email"></label>
+      <label>Password<input id="passwordField" type="password" required minlength="8" autocomplete="current-password"></label>
+      <p class="form-hint">Use at least 8 characters for your password.</p>
+      <p class="form-message" id="authMessage"></p>
+      <button class="btn btn-primary full" type="submit" id="authSubmit">Sign in</button>
+    </form>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="/static/js/app.js"></script>
+</body></html>
